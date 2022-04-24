@@ -1,8 +1,8 @@
 <?php
-$name = $_post['name'];
-$visitor_email = $_post['email'];
-$subject = $_post['subject'];
-$message = $_post['message'];
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
 $email_form = 'dharmik0121@gmail.com';
 
@@ -20,6 +20,6 @@ $headers = "Form : $email_form \r\n"
 $headers .="Reply-to:$visitor_email \r\n";
 
 mail($to,$email_subject,$email_body,$headers);
-header("Location:Contact.html");
 
+header("Location: Contact.html");
 ?>
